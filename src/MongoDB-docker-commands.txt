@@ -1,0 +1,34 @@
+   docker pull mongo
+  
+   docker run -d -p 27017:27017 --name shopping-mongo mongo
+   -d detached (container run in the background)
+   -p (port numbers first docker container running port number second we open
+   port to outside)
+   --name (we use this name instead UUID number of image)
+   docker run ps (shows running process in the background -a flag for all process
+   includes not running processes)
+ 
+   docker exec -it shopping-mongo /bin/bash (Opens a bash inside the container
+   where we can run cli commands for our mongodb)
+ 
+   mongo (this command run mongodb)
+   show dbs (show dbs)
+   Use CatalogDb (create and switched to db with name CatalogDb)
+   db.createCollection('Products) (create collection with given name)
+   db.Products.insert  (insert a product)
+   db.Products.insertMany (insert many products)
+ 
+   db.Products.insertMany([{ 'Name':'Asus Laptop','Category':'Computers',
+   'Summary':'Summary', 'Description':'Description', 'ImageFile':'ImageFile',
+   'Price':54.93 }, { 'Name':'HP Laptop','Category':'Computers',
+   'Summary':'Summary', 'Description':'Description', 'ImageFile':'ImageFile',
+   'Price':88.93 }
+ 
+   db.Products.find({}).pretty()  (find all products)
+ 
+   db.Products.remove({})  (remove all products)
+ 
+   show databases
+   show collections
+
+

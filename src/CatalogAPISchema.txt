@@ -1,0 +1,5 @@
+Method                  RequestURI                  Use Case
+
+GET                     api/v1/Catalog              Listing Products and Categories
+
+
